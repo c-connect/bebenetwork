@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+ * A Design by GraphBerry
+ * Author: GraphBerry
+ * Author URL: http://graphberry.com
+ * License: http://graphberry.com/pages/license
+-->
+<html lang="en">
+    
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ユーザー登録｜Be:Be network</title>
+        <!-- Load Roboto font -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!-- Load css styles -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/pluton.css" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="index.html" class="brand">
+                        <img src="images/logo.png" width="120" height="40" alt="Logo" />
+                        <!-- This is website logo -->
+                    </a>
+                    <!-- Navigation button, visible on small resolution -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <!-- Main navigation -->
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav" id="top-navigation">
+                            <li class="active"><a href="#home">入力</a></li>
+                            <li><a href="#service">確認画面</a></li>
+                            <li><a href="#portfolio">完了☆</a></li>
+<!--                            <li><a href="#about">about</a></li>
+                            <li><a href="#clients">Clients</a></li>
+                            <li><a href="#price">price</a></li>
+                            <li><a href="#contact">Point</a></li>
+-->                        </ul>
+                    </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+
+        <!-- register section start hotani -->
+        <div id="home" class="section primary-section">
+            <div class="container">
+                <div class="title">
+                    <h1>ユーザー登録</h1>
+                </div>
+                <div class="centered">
+                    <form action="register_02.php" method="POST">
+                    <div id="registor00" class="">
+                        <input type="text" name="name" placeholder="氏名" class="form01"><br>
+                        <input type="text" name="furigana" placeholder="フリガナ" class="form01"><br>
+                        <input type="text" name="nickname" placeholder="ニックネーム" class="form01"><br>
+                        <div class="radioBtn">
+                            <input type="radio" name="sex" value="0"> 女性 
+                            <input type="radio" name="sex" value="1"> 男性 
+                            <input type="radio" name="sex" value="2"> その他 
+                        </div>
+                        <input type="text" name="height" placeholder="現在の身長 (cm)" class="form01"><br>
+                        <input type="text" name="weight" placeholder="現在の体重 (kg)" class="form01 form03"><br>
+                        <input type="text" name="mail_address" placeholder="登録用メールアドレス" class="form01"><br>
+                        <input type="password" name="password" placeholder="パスワード" class="form01"><br>
+                        <input type="password" name="password2" placeholder="パスワード確認用" class="form01 form03"><br>
+                        
+                        <h3>利用規約</h3>
+                        <div class="kiyaku">
+                            <div class="insite">
+                                <h4>利用規約</h4>
+                                <p>この利用規約（以下，「本規約」といいます。）は，株式会社シー・コネクト（以下，「当社」といいます。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。<br><b>また、本サービスは個人情報保護等のセキュリティ対策を行っておりません。ご利用の場合には個人情報の特定されない範囲でご利用ください。</b></p>
+
+                                <h4>第1条（適用）</h4>
+                                <p>本規約は，ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。</p>
+
+                                <h4>第2条（利用登録）</h4>
+                                <p>登録希望者が当社の定める方法によって利用登録を申請し，当社がこれを承認することによって，利用登録が完了するものとします。当社は，利用登録の申請者に以下の事由があると判断した場合，利用登録の申請を承認しないことがあり，その理由については一切の開示義務を負わないものとします。<br>
+                                （1）利用登録の申請に際して虚偽の事項を届け出た場合<br>
+                                （2）本規約に違反したことがある者からの申請である場合<br>
+                                （3）その他，当社が利用登録を相当でないと判断した場合</p>
+                                
+                                <h4>第3条（ユーザーIDおよびパスワードの管理）</h4>
+                                <p>ユーザーは，自己の責任において，本サービスのユーザーIDおよびパスワードを管理するものとします。ユーザーは，いかなる場合にも，ユーザーIDおよびパスワードを第三者に譲渡または貸与することはできません。当社は，ユーザーIDとパスワードの組み合わせが登録情報と一致してログインされた場合には，そのユーザーIDを登録しているユーザー自身による利用とみなします。</p>
+                                
+                                <h4>第4条（禁止事項）</h4>
+                                <p>ユーザーは，本サービスの利用にあたり，以下の行為をしてはなりません。<br>
+                                （1）法令または公序良俗に違反する行為<br>
+                                （2）犯罪行為に関連する行為<br>
+                                （3）当社のサーバーまたはネットワークの機能を破壊したり，妨害したりする行為<br>
+                                （4）当社のサービスの運営を妨害するおそれのある行為<br>
+                                （5）他のユーザーに関する個人情報等を収集または蓄積する行為<br>
+                                （6）他のユーザーに成りすます行為<br>
+                                （7）当社のサービスに関連して，反社会的勢力に対して直接または間接に利益を供与する行為<br>
+                                （8）その他，当社が不適切と判断する行為</p>
+                                
+                                <h4>第5条（本サービスの提供の停止等）</h4>
+                                <p>当社は，以下のいずれかの事由があると判断した場合，ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。<br>
+                                （1）本サービスにかかるコンピュータシステムの保守点検または更新を行う場合<br>
+                                （2）地震，落雷，火災，停電または天災などの不可抗力により，本サービスの提供が困難となった場合<br>
+                                （3）コンピュータまたは通信回線等が事故により停止した場合<br>
+                                （4）その他，当社が本サービスの提供が困難と判断した場合<br>
+                                当社は，本サービスの提供の停止または中断により，ユーザーまたは第三者が被ったいかなる不利益または損害について，理由を問わず一切の責任を負わないものとします。</p>
+                                
+                                <h4>第6条（利用制限および登録抹消）</h4>
+                                <p>当社は，以下の場合には，事前の通知なく，ユーザーに対して，本サービスの全部もしくは一部の利用を制限し，またはユーザーとしての登録を抹消することができるものとします。<br>
+                                （1）本規約のいずれかの条項に違反した場合<br>
+                                （2）登録事項に虚偽の事実があることが判明した場合<br>
+                                （3）その他，当社が本サービスの利用を適当でないと判断した場合<br>
+                                当社は，本条に基づき当社が行った行為によりユーザーに生じた損害について，一切の責任を負いません。</p>
+                                
+                                <h4>第7条（免責事項）</h4>
+                                <p>当社の債務不履行責任は，当社の故意または重過失によらない場合には免責されるものとします。
+                                当社は，本サービスに関して，ユーザーと他のユーザーまたは第三者との間において生じた取引，連絡または紛争等について一切責任を負いません。
+                                当社は、本サービスへのユーザー登録およびユーザーの本サービスのご利用(これらに付随する当社または第三者の情報提供行為等を含む)その他本サービスを通じてアクセスできる第三者企業が提供するサイトおよび本サービスの利用により生じる一切の損害(精神的苦痛、求職活動の中断、またはその他の金銭的損失を含む一切の不利益)につき、その賠償義務を負いません。但し、当社の故意または重大な過失により利用者に損害を与えた場合は、該当する者が直接被った損害額の実費を上限として損害賠償を行うことがあります。
+                                <b>当社は，本サービスに対して個人情報保護等のセキュリティ対策を行っていないため、これに生じた損害について一切の責任を負いません。</b></p>
+                                
+                                <h4>第8条（サービス内容の変更等）</h4>
+                                <p>当社は，ユーザーに通知することなく，本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし，これによってユーザーに生じた損害について一切の責任を負いません。</p>
+
+                                <h4>第9条（利用規約の変更）</h4>
+                                <p>当社は，必要と判断した場合には，ユーザーに通知することなくいつでも本規約を変更することができるものとします。</p>
+
+                                <h4>第10条（通知または連絡）</h4>
+
+                                <p>ユーザーと当社との間の通知または連絡は，当社の定める方法によって行うものとします。</p>
+
+                                <h4>第11条（権利義務の譲渡の禁止）</h4>
+
+                                <p>ユーザーは，当社の書面による事前の承諾なく，利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し，または担保に供することはできません。</p>
+
+                                <h4>第12条（準拠法・裁判管轄）</h4>
+
+                                <p>本規約の解釈にあたっては，日本法を準拠法とします。
+                                本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</p>
+
+                                <p style="text-align:right;">以上</p>
+                            </div>
+                        </div><br>
+                        <input type="submit" value="確認" class="form02">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #registor end hotani -->
+
+        <!-- Footer section start -->
+        <div class="footer">
+            <p><a href="index.html" style="color:white">HOME</a></p>
+<!--        <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p> -->
+<!--        <p><a href="course.html" style="color:white">バナナダイエット</a></p> --> 
+<!--        <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p> -->
+<!--        <p><a href="mypage.html" style="color:white">マイページ</a></p> -->
+            <p>&copy; 2015 Be:Be network &amp; c-connect</p>
+        </div>
+        <!-- Footer section end -->
+        <!-- ScrollUp button start -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
+        <!-- ScrollUp button end -->
+        <!-- Include javascript -->
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="js/jquery.cslider.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/jquery.inview.js"></script>
+        <!-- Load google maps api and call initializeMap function defined in app.js -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
+        <!-- css3-mediaqueries.js for IE8 or older -->
+        <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
+
