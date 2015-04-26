@@ -27,43 +27,35 @@
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
     </head>
 
     <body>
+        <!-- start navigation -->
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="index.html" class="brand">
                         <img src="images/logo.png" width="120" height="40" alt="Logo" />
-
-                        <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <i class="icon-menu"></i>
                     </button>
-                    <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li><a href="#home">ログイン</a></li>
                             <li class="active"><a href="#service">ログイン完了</a></li>
-<!--                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#about">Our Services</a></li>
-                            <li><a href="#clients">Clients</a></li>
-                            <li><a href="#price">Diet Battle</a></li>
-                            <li><a href="#contact">Point</a></li>
--->                        </ul>
+                        </ul>
                     </div>
-                    <!-- End main navigation -->
                 </div>
             </div>
         </div>
-
-
-      <div id="price" class="section primary-section">
+        <!-- End navigation -->
+        <!-- start login check -->
+        <div id="price" class="section primary-section">
             <div class="container">
                 <div class="title">
                     <h1>ログイン確認</h1>
@@ -72,86 +64,74 @@
                     
                     <?php
 
-  $mail = $_POST["mail_address"];
-  $pw = $_POST["password"];
+                        $mail = $_POST["mail_address"];
+                        $pw = $_POST["password"];
 
-  session_start();
-  session_destroy();
+                        session_start();
+                        session_destroy();
 
+                        $connect = mysql_connect ("mysql707a.xserver.jp", "japangoods_bebe", "bebe30");
+                        mysql_query("SET NAMES utf8", $connect);
 
-  $connect = mysql_connect ("mysql707a.xserver.jp", "japangoods_bebe", "bebe30");
-  mysql_query("SET NAMES utf8", $connect);
+                        $result=mysql_db_query("japangoods_bebenetwork",
+                           "SELECT * from user_tbl where mail = '$mail' ");
 
-  $result=mysql_db_query("japangoods_bebenetwork",
-     "SELECT * from user_tbl where mail = '$mail' ");
+                        while(true){
+                           $kekka = mysql_fetch_assoc($result); 
 
-  while(true){
-     $kekka = mysql_fetch_assoc($result); 
+                              if ($kekka == null) {
+                                break;
+                                }else{
+                                   $i++;
 
-        if ($kekka == null) {
-          break;
-          }else{
-             $i++;
-
-                 $UserInfo[$i]["nickname"] = $kekka['nickname'];
-                 $UserInfo[$i]["height"] = $kekka['height'];
-                 $UserInfo[$i]["mail"] = $kekka["mail"];
-                 $UserInfo[$i]["weight_new"] = $kekka["weight_new"];
-                 $UserInfo[$i]["pass"] = $kekka["pass"];
-
-
-          }
+                                       $UserInfo[$i]["nickname"] = $kekka['nickname'];
+                                       $UserInfo[$i]["height"] = $kekka['height'];
+                                       $UserInfo[$i]["mail"] = $kekka["mail"];
+                                       $UserInfo[$i]["weight_new"] = $kekka["weight_new"];
+                                       $UserInfo[$i]["pass"] = $kekka["pass"];
+                              }
+                        }
 
 
-}
+                    //start. by hotani
 
+                    if( (!empty($mail)) && (!empty($pw)) && ($UserInfo[1]["mail"] == $mail) && ($UserInfo[1]["pass"] == $pw)){
 
-//start. by hotani
+                          session_start(); /*セッションがここからはじまるよ*/
+                          $_SESSION['mail_address'] = $mail;
+                          $_SESSION['password'] = $pw;
 
-if( (!empty($mail)) && (!empty($pw)) && ($UserInfo[1]["mail"] == $mail) && ($UserInfo[1]["pass"] == $pw)){
+                          echo "<br><p>";
+                          echo "ようこそ、";
+                          echo $UserInfo[$i]["nickname"];
+                          echo "さん！</p><br>";
+                          echo "<a href='mypage.php' class='button'>マイページへ</a>";
+                          echo "<br><br><br><br><br><br><br><br><br><br><br>";
+                        }else if(($mail == null) || ($pw == null)){
+                          echo "<p>未入力の項目があります。</p>";
+                          echo "<p>IDとパスワードをご確認の上、もう一度ご入力ください。</p><br><br>";
+                          echo "<a href='login.html' class='button'>ログイン画面へもどる</a>";
+                          echo "<br><br><br><br><br><br><br><br><br>";
+                        }else{
+                          echo "<p>IDとパスワードが一致しません。</p>";
+                          echo "<p>ご確認の上、もう一度ご入力ください。</p><br><br>";
+                          echo "<a href='login.html' class='button'>ログイン画面へもどる</a>";
+                          echo "<br><br><br><br><br><br><br><br><br>";
+                        }
 
-      session_start(); /*セッションがここからはじまるよ*/
-      $_SESSION['mail_address'] = $mail;
-      $_SESSION['password'] = $pw;
+                    //end.by hotani 
 
-      echo "<br><p>";
-      echo "ようこそ、";
-      echo $UserInfo[$i]["nickname"];
-      echo "さん！</p><br>";
-      echo "<a href='mypage.php' class='button'>マイページへ</a>";
-      echo "<br><br><br><br><br><br><br><br><br><br><br>";
-    }else if(($mail == null) || ($pw == null)){
-      echo "<p>未入力の項目があります。</p>";
-      echo "<p>IDとパスワードをご確認の上、もう一度ご入力ください。</p><br><br>";
-      echo "<a href='login.html' class='button'>ログイン画面へもどる</a>";
-      echo "<br><br><br><br><br><br><br><br><br>";
-    }else{
-      echo "<p>IDとパスワードが一致しません。</p>";
-      echo "<p>ご確認の上、もう一度ご入力ください。</p><br><br>";
-      echo "<a href='login.html' class='button'>ログイン画面へもどる</a>";
-      echo "<br><br><br><br><br><br><br><br><br>";
-    }
+                      mysql_close($connect);
 
-//end.by hotani 
-
-
-    
-  mysql_close($connect);
-
-?>
+                    ?>
 
                 </div>
             </div>
         </div>
-
         <!-- login end hotani ohkawa -->
         <!-- Footer section start -->
         <div class="footer">
             <p><a href="index.html" style="color:white">HOME</a></p>
-<!--        <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p> -->
-<!--        <p><a href="course.html" style="color:white">バナナダイエット</a></p> --> 
-<!--        <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p> -->
-<!--        <p><a href="mypage.html" style="color:white">マイページ</a></p> -->
             <p>&copy; 2015 Be:Be network &amp; c-connect</p>
         </div>
         <!-- Footer section end -->

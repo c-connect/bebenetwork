@@ -27,39 +27,34 @@
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
     </head>
     
     <body>
+        <!-- start navigation -->
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="index.html" class="brand">
                         <img src="images/logo.png" width="120" height="40" alt="Logo" />
-                        <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <i class="icon-menu"></i>
                     </button>
-                    <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li class="active"><a href="#home">入力</a></li>
                             <li><a href="#service">確認画面</a></li>
                             <li><a href="#portfolio">完了☆</a></li>
-<!--                            <li><a href="#about">about</a></li>
-                            <li><a href="#clients">Clients</a></li>
-                            <li><a href="#price">price</a></li>
-                            <li><a href="#contact">Point</a></li>
--->                        </ul>
+                        </ul>
                     </div>
-                    <!-- End main navigation -->
                 </div>
             </div>
         </div>
+        <!-- End main navigation -->
 
         <!-- register section start hotani -->
         <div id="home" class="section primary-section">
@@ -68,13 +63,13 @@
                     <h1>ユーザー登録</h1>
                 </div>
                 <div class="centered">
-                    <form action="register_02.php" method="POST">
+                    <form action="register_02.php" name="register01" method="POST">
                     <div id="registor00" class="">
                         <input type="text" name="name" placeholder="氏名" class="form01"><br>
                         <input type="text" name="furigana" placeholder="フリガナ" class="form01"><br>
                         <input type="text" name="nickname" placeholder="ニックネーム" class="form01"><br>
                         <div class="radioBtn">
-                            <input type="radio" name="sex" value="0"> 女性 
+                            <input type="radio" name="sex" value="0" checked="checked"> 女性 
                             <input type="radio" name="sex" value="1"> 男性 
                             <input type="radio" name="sex" value="2"> その他 
                         </div>
@@ -156,13 +151,14 @@
                                 <p style="text-align:right;">以上</p>
                             </div>
                         </div><br>
-                        <input type="submit" value="確認" class="form02">
+                        <a href='Javascript:void(0);' class='button' onclick="document.register01.submit();">確認</a>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- #registor end hotani -->
-
+        <br><br><br>
         <!-- Footer section start -->
         <div class="footer">
             <p><a href="index.html" style="color:white">HOME</a></p>

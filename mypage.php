@@ -27,7 +27,7 @@
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
         <?php
@@ -46,106 +46,106 @@
         $row = mysql_fetch_assoc($result);
 
         ?>
-<!-- start google chart takahashi -->
-    <script type="text/javascript"
-          src="https://www.google.com/jsapi?autoload={
-            'modules':[{
-              'name':'visualization',
-              'version':'1',
-              'packages':['corechart']
-            }]
-          }"></script>
+        <!-- start google chart takahashi -->
+        <script type="text/javascript"
+              src="https://www.google.com/jsapi?autoload={
+                'modules':[{
+                  'name':'visualization',
+                  'version':'1',
+                  'packages':['corechart']
+                }]
+              }"></script>
 
-    <script type="text/javascript">
-      google.setOnLoadCallback(drawChart);
+        <script type="text/javascript">
+          google.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Month', 'ゆうこ', 'ゆっきー', 'めぐみ', 'そめや', 'まり'],
-          ['4月21日',  1,    -1,    0,    -1.5,    -0.5],
-          ['4月22日',  -1,   -1,    1,    -1.5,    -0.5],
-          ['4月23日',  2,    -1,    1,    -1.5,    -0.5],
-          ['4月24日',  1,    -1,    1,    -1.5,    -0.5],
-          ['4月25日',  0.5,  -1,    1,    -1.5,    -0.5],
-          ['4月26日',  1,    -1,    2,    -1.5,    -0.5],
-          ['4月27日',  2.5,  -1,    3,    -1.5,    -0.5]
-        ]);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Month', 'ゆうこ', 'ゆっきー', 'めぐみ', 'そめや', 'まり'],
+              ['4月21日',  1,    -1,    0,    -1.5,    -0.5],
+              ['4月22日',  -1,   -1,    1,    -1.5,    -0.5],
+              ['4月23日',  2,    -1,    1,    -1.5,    -0.5],
+              ['4月24日',  1,    -1,    1,    -1.5,    -0.5],
+              ['4月25日',  0.5,  -1,    1,    -1.5,    -0.5],
+              ['4月26日',  1,    -1,    2,    -1.5,    -0.5],
+              ['4月27日',  2.5,  -1,    3,    -1.5,    -0.5]
+            ]);
 
-        var options = {
-          title: ' ',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+            var options = {
+              title: ' ',
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
 
-        var chart = new google.visualization.LineChart(document.getElementById('battle_chart'));
+            var chart = new google.visualization.LineChart(document.getElementById('battle_chart'));
 
-        chart.draw(data, options);
-      }
-    </script>
-    <script type="text/javascript">
-      google.setOnLoadCallback(drawChart);
+            chart.draw(data, options);
+          }
+        </script>
+        <script type="text/javascript">
+          google.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Month', 'ゆうこ'],
-          ['3月27日',  47],
-          ['4月21日',  48],
-          ['4月22日',  48],
-          ['4月23日',  47.5],
-          ['4月24日',  47.5],
-          ['4月25日',  47.5],
-          ['4月26日',  47],
-          ['4月27日',  47],
-          ['6月27日',  47]
-        ]);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Month', 'ゆうこ'],
+              ['3月27日',  47],
+              ['4月21日',  48],
+              ['4月22日',  48],
+              ['4月23日',  47.5],
+              ['4月24日',  47.5],
+              ['4月25日',  47.5],
+              ['4月26日',  47],
+              ['4月27日',  47],
+              ['6月27日',  47]
+            ]);
 
-        var options = {
-          title: ' ',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+            var options = {
+              title: ' ',
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
 
-        var chart = new google.visualization.LineChart(document.getElementById('me_chart'));
+            var chart = new google.visualization.LineChart(document.getElementById('me_chart'));
 
-        chart.draw(data, options);
-      }
-    </script>
-    <script type="text/javascript">
-      google.setOnLoadCallback(drawChart);
+            chart.draw(data, options);
+          }
+        </script>
+        <script type="text/javascript">
+          google.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Month', '朝バナナ', '白湯', '逆立ち', '蒸し野菜', '脱糖', 'オチョダイエット'],
-          ['4月21日',  48,    51,    60,    44,    46,    70],
-          ['4月22日',  48,    51,    59,    44,    47,    60],
-          ['4月23日',  47.5,  51,    58,    44,    48,    65],
-          ['4月24日',  47.5,  51,    57,    44,    49,    65],
-          ['4月25日',  47.5,  51,    56,    44,    50,    70],
-          ['4月26日',  47,    51,    55,    44,    51,    50],
-          ['4月27日',  47,    51,    54,    44,    52,    60]
-        ]);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Month', '朝バナナ', '白湯', '逆立ち', '蒸し野菜', '脱糖', 'オチョダイエット'],
+              ['4月21日',  48,    51,    60,    44,    46,    70],
+              ['4月22日',  48,    51,    59,    44,    47,    60],
+              ['4月23日',  47.5,  51,    58,    44,    48,    65],
+              ['4月24日',  47.5,  51,    57,    44,    49,    65],
+              ['4月25日',  47.5,  51,    56,    44,    50,    70],
+              ['4月26日',  47,    51,    55,    44,    51,    50],
+              ['4月27日',  47,    51,    54,    44,    52,    60]
+            ]);
 
-        var options = {
-          title: ' ',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+            var options = {
+              title: ' ',
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
 
-        var chart = new google.visualization.LineChart(document.getElementById('diet_all_chart'));
+            var chart = new google.visualization.LineChart(document.getElementById('diet_all_chart'));
 
-        chart.draw(data, options);
-      }
-    </script>
-<!-- end google chart takahashi -->
+            chart.draw(data, options);
+          }
+        </script>
+        <!-- end google chart takahashi -->
     </head>
     
     <body>
+        <!-- start navigation -->
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="index.html" class="brand">
                         <img src="images/logo.png" width="120" height="40" alt="Logo" />
-                        <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
                     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -154,9 +154,7 @@
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
-                            <li class="active"><!--<a href="#home">Home</a></li>
-                            <li><a href="#service">Services</a></li>
--->                            <li><a href="#portfolio">Profile</a></li>
+                            <li class="active"><a href="#portfolio">Profile</a></li>
                             <li><a href="#about">Your weight</a></li>
                             <li><a href="#about2">Your battle</a></li>
                             <li><a href="#clients">Column &amp;　Movie</a></li>
@@ -164,127 +162,17 @@
                             <li><a href="#contact">Graph</a></li>
                         </ul>
                     </div>
-                    <!-- End main navigation -->
                 </div>
             </div>
         </div>
-        <!-- Start home section -->
-<!--        <div id="home">
-            <!-- Start cSlider -->
-<!--            <div id="da-slider" class="da-slider">
-                <div class="triangle"></div>
-                <!-- mask elemet use for masking background image -->
-<!--                <div class="mask"></div>
-                <!-- All slides centred in container element -->
-<!--                <div class="container">
-                    <!-- Start first slide -->
-<!--                    <div class="da-slide">
-                        <h2 class="fittext2">Welcome to pluton theme</h2>
-                        <h4>Clean & responsive</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider01.png" alt="image01" width="320">
-                        </div>
-                    </div>
-                    <!-- End first slide -->
-                    <!-- Start second slide -->
-<!--                    <div class="da-slide">
-                        <h2>Easy management</h2>
-                        <h4>Easy to use</h4>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider02.png" width="320" alt="image02">
-                        </div>
-                    </div>
-                    <!-- End second slide -->
-                    <!-- Start third slide -->
-<!--                    <div class="da-slide">
-                        <h2>Revolution</h2>
-                        <h4>Customizable</h4>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="#" class="da-link button">Read more</a>
-                        <div class="da-img">
-                            <img src="images/Slider03.png" width="320" alt="image03">
-                        </div>
-                    </div>
-                    <!-- Start third slide -->
-                    <!-- Start cSlide navigation arrows -->
-<!--                    <div class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </div>
-                    <!-- End cSlide navigation arrows -->
-<!--                </div>
-            </div>
-        </div>
-        <!-- End home section -->
-        <!-- Service section start -->
-<!--        <div class="section primary-section" id="service">
-            <div class="container">
-                <!-- Start title section -->
-<!--                <div class="title">
-                    <h1>What We Do?</h1>
-                    <!-- Section's title goes here -->
-<!--                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                    <!--Simple description for section goes here. -->
-<!--                </div>
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service1.png" alt="service 1">
-                            </div>
-                            <h3>Modern Design</h3>
-                            <p>We Create Modern And Clean Theme For Your Business Company.</p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service2.png" alt="service 2" />
-                            </div>
-                            <h3>Powerfull Theme</h3>
-                            <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="images/Service3.png" alt="service 3">
-                            </div>
-                            <h3>Clean Code</h3>
-                            <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service section end -->
-        <!-- Portfolio section start -->
+        <!-- End main navigation -->
+        <!-- profile section start -->
         <div class="section primary-section " id="portfolio">
-<!--            <div class="triangle"></div>
--->            <div class="container">
+            <div class="container">
                 <div class=" title">
                     <h1>マイページ</h1>
-<!--                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
--->                </div>
-<!--                <ul class="nav nav-pills">
-                    <li class="filter" data-filter="all">
-                        <a href="#noAction">All</a>
-                    </li>
-                    <li class="filter" data-filter="web">
-                        <a href="#noAction">Web</a>
-                    </li>
-                    <li class="filter" data-filter="photo">
-                        <a href="#noAction">Photo</a>
-                    </li>
-                    <li class="filter" data-filter="identity">
-                        <a href="#noAction">Identity</a>
-                    </li>
-                </ul>
--->                <!-- Start details for portfolio project 1 -->
+                </div>
+                <!-- Start details for portfolio project 1 -->
                 <div id="single-project">
                     <div id="slidingDiv" class="toggleDiv row-fluid single-project" style="display:on;">
                         <div class="span6">
@@ -299,515 +187,40 @@
                                     </span>
 -->                                </div>
                                 <div class="project-info">
-                                   <!-- <div>
-                                        <span>バトルpt</span>100pt</div>
-                                    <div>
-                                        <span>交換pt</span>30pt</div>-->
-                                    <div>
-                                        <span>目標体重</span><?php echo $row[""]; ?>kg</div>
-                                    <div>
-                                        <span>現在体重</span><?php echo $row["weight_new"]; ?>kg</div>
-                                    <div>
-                                        <span>開始身長</span><?php echo $row["height"]; ?>cm</div>
-                                    <div>
-                                        <span>開始体重</span><?php echo $row["weight"]; ?>kg</div>
-                                    <div>
-                                        <span>生活リズム</span>ふつう</div>
-                                    <div>
-                                        <span>食生活</span>1日3食+おやつ</div>
-                                    <p>【自己紹介】</p><p><?php echo $row["comment"]; ?></p>
+<!--                                    <div><span>バトルpt</span>100pt</div>
+                                    <div><span>交換pt</span>30pt</div>
+-->                                    <div><span>目標体重</span><?php echo $row["goal"]; ?>kg</div>
+                                    <div><span>現在体重</span><?php echo $row["weight_new"]; ?>kg</div>
+                                    <div><span>開始身長</span><?php echo $row["height"]; ?>cm</div>
+                                    <div><span>開始体重</span><?php echo $row["weight"]; ?>kg</div>
+                                    <div><span>生活リズム</span>ふつう</div>
+                                    <div><span>食生活</span>1日3食+おやつ</div>
+                                    <div><span>自己紹介</span><p><?php echo $row["comment"]; ?></p></div>
+                                    <a href="info_change.php" class="da-link button">プロフィール編集</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- End details for portfolio project 1 -->
-                    <!-- Start details for portfolio project 2 -->
-<!--                    <div id="slidingDiv1" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio02.png" alt="project 2">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
-                            </div>
-                        </div>
+                    <div class="span9 center contact-info" id="about">
+                        <div class="title"><h3>登録から今までの体重記録</h3></div>
                     </div>
-                    <!-- End details for portfolio project 2 -->
-                    <!-- Start details for portfolio project 3 -->
-<!--                    <div id="slidingDiv2" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio03.png" alt="project 3">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
-                            </div>
-                        </div>
+                    <div id="me_chart" style="height:200px; margin-bottom:30px;"></div>
+                    <br><br>
+                    <div class="span9 center contact-info" id="about2">
+                        <div class="title"><h3>参加中のダイエットバトル</h3></div>
                     </div>
-                    <!-- End details for portfolio project 3 -->
-                    <!-- Start details for portfolio project 4 -->
-<!--                    <div id="slidingDiv3" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio04.png" alt="project 4">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Project for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 4 -->
-                    <!-- Start details for portfolio project 5 -->
-<!--                   <div id="slidingDiv4" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio05.png" alt="project 5">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 5 -->
-                    <!-- Start details for portfolio project 6 -->
-<!--                    <div id="slidingDiv5" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio06.png" alt="project 6">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 6 -->
-                    <!-- Start details for portfolio project 7 -->
-<!--                    <div id="slidingDiv6" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio07.png" alt="project 7">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>Always continue the climb. It is possible for you to do whatever you choose, if you first get to know who you are and are willing to work with a power that is greater than ourselves to do it.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 7 -->
-                    <!-- Start details for portfolio project 8 -->
-<!--                    <div id="slidingDiv7" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio08.png" alt="project 8">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>What if you gave someone a gift, and they neglected to thank you for it - would you be likely to give them another? Life is the same way. In order to attract more of the blessings that life has to offer, you must truly appreciate what you already have.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 8 -->
-                    <!-- Start details for portfolio project 9 -->
-<!--                    <div id="slidingDiv8" class="toggleDiv row-fluid single-project">
-                        <div class="span6">
-                            <img src="images/Portfolio09.png" alt="project 9">
-                        </div>
-                        <div class="span6">
-                            <div class="project-description">
-                                <div class="project-title clearfix">
-                                    <h3>Webste for Some Client</h3>
-                                    <span class="show_hide close">
-                                        <i class="icon-cancel"></i>
-                                    </span>
-                                </div>
-                                <div class="project-info">
-                                    <div>
-                                        <span>Client</span>Some Client Name</div>
-                                    <div>
-                                        <span>Date</span>July 2013</div>
-                                    <div>
-                                        <span>Skills</span>HTML5, CSS3, JavaScript</div>
-                                    <div>
-                                        <span>Link</span>http://examplecomp.com</div>
-                                </div>
-                                <p>I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End details for portfolio project 9 -->
-<!--                    <ul id="portfolio-grid" class="thumbnails row">
-                        <li class="span4 mix web">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio01.png" alt="project 1">
-                                <a href="#single-project" class="more show_hide" rel="#slidingDiv">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix photo">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio02.png" alt="project 2">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv1">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix identity">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio03.png" alt="project 3">
-                                <a href="#single-project" class="more show_hide" rel="#slidingDiv2">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix web">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio04.png" alt="project 4">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv3">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix photo">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio05.png" alt="project 5">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv4">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix identity">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio06.png" alt="project 6">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv5">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix web">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio07.png" alt="project 7" />
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv6">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix photo">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio08.png" alt="project 8">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv7">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
-                        <li class="span4 mix identity">
-                            <div class="thumbnail">
-                                <img src="images/Portfolio09.png" alt="project 9">
-                                <a href="#single-project" class="show_hide more" rel="#slidingDiv8">
-                                    <i class="icon-plus"></i>
-                                </a>
-                                <h3>Thumbnail label</h3>
-                                <p>Thumbnail caption...</p>
-                                <div class="mask"></div>
-                            </div>
-                        </li>
--->                    </ul>
-                            <div class="span9 center contact-info" id="about">
-                                <div class="title">
-                                    <h3>登録から今までの体重記録</h3>
-                                </div>
-                            </div>
-                            <div id="me_chart" style="height:200px; margin-bottom:30px;"></div>
-
-                            <div class="span9 center contact-info" id="about2">
-                                <div class="title">
-                                    <h3>参加中のダイエットバトル</h3>
-                                </div>
-                            </div>
-                            <div id="battle_chart" style="height: 200px"></div>
-                            <br><br>
-                            <div class="centered">
-                                <a href="mybattle.html" class="button">バトルページへ</a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-
-        <!-- Portfolio section end -->
-        <!-- About us section start -->
-<!--        <div class="section primary-section" id="about">
-            <div class="triangle"></div>
-            <div class="container">
-                <div class="title">
-                    <h1>Who We Are?</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                </div>
-                <div class="row-fluid team">
-                    <div class="span4" id="first-person">
-                        <div class="thumbnail">
-                            <img src="images/Team1.png" alt="team 1">
-                            <h3>John Doe</h3>
-                            <ul class="social">
-                                <li>
-                                    <a href="">
-                                        <span class="icon-facebook-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-twitter-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="mask">
-                                <h2>Copywriter</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span4" id="second-person">
-                        <div class="thumbnail">
-                            <img src="images/Team2.png" alt="team 1">
-                            <h3>John Doe</h3>
-                            <ul class="social">
-                                <li>
-                                    <a href="">
-                                        <span class="icon-facebook-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-twitter-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="mask">
-                                <h2>Designer</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span4" id="third-person">
-                        <div class="thumbnail">
-                            <img src="images/Team3.png" alt="team 1">
-                            <h3>John Doe</h3>
-                            <ul class="social">
-                                <li>
-                                    <a href="">
-                                        <span class="icon-facebook-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-twitter-circled"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="icon-linkedin-circled"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="mask">
-                                <h2>Photographer</h2>
-                                <p>When you stop expecting people to be perfect, you can like them for who they are.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text centered">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                </div>
-                <h3>Skills</h3>
-                <div class="row-fluid">
-                    <div class="span6">
-                        <ul class="skills">
-                            <li>
-                                <span class="bar" data-width="80%"></span>
-                                <h3>Graphic Design</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="95%"></span>
-                                <h3>Html & Css</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="68%"></span>
-                                <h3>jQuery</h3>
-                            </li>
-                            <li>
-                                <span class="bar" data-width="70%"></span>
-                                <h3>Wordpress</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="span6">
-                        <div class="highlighted-box center">
-                            <h1>We're Hiring</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
-                            <button class="button button-sp">Join Us</button>
-                        </div>
+                    <div id="battle_chart" style="height: 200px"></div>
+                    <br><br>
+                    <div class="centered">
+                        <a href="mybattle.html" class="button">バトルページへ</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About us section end -->
-<!--        <div class="section secondary-section">
-            <div class="triangle"></div>
-            <div class="container centered">
-                <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
-                <a href="#" class="button">Purshase now</a>
-            </div>
-        </div>
-        <!-- Client section start -->
-        <!-- Client section start -->
+        <!-- profile section end -->
+        <!-- colomun section start -->
         <div id="clients">
             <div class="section secondary-section">
-<!--                <div class="triangle"></div> -->
                 <div class="container">
                     <div class="title">
                         <h1>コラム＆ムービー</h1>
@@ -816,10 +229,8 @@
                     <div class="row">
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client1.png" class="centered" alt="client 1">
+                                <div class="whopic2">
+                                    <img src="images/column1.png" class="centered" alt="column 1">
                                     <strong>飲む点滴!!○酒を飲みながらダイエット!??
                                         <small>2015/04/22/10:20｜つかもん</small>
                                     </strong>
@@ -828,10 +239,8 @@
                         </div>
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client2.png" class="centered" alt="client 2">
+                                <div class="whopic2">
+                                    <img src="images/column2.png" class="centered" alt="column 2">
                                     <strong>食べても太らない？！食事時間の3つの秘密
                                         <small>2015/04/21/12:20｜be:be network</small>
                                     </strong>
@@ -840,10 +249,8 @@
                         </div>
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client3.png" class="centered" alt="client 3">
+                                <div class="whopic2">
+                                    <img src="images/column3.png" class="centered" alt="column 3">
                                     <strong>あなたは間違えている！真なるダイエット極意
                                         <small>2015/04/20/09:20｜be:be network</small>
                                     </strong>
@@ -853,10 +260,8 @@
 
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client3.png" class="centered" alt="client 4">
+                                <div class="whopic2">
+                                    <img src="images/column4.png" class="centered" alt="column 4">
                                     <strong>肉でつくろう！彼から愛される引き締めボディ！
                                         <small>2015/04/19/21:20｜be:be network</small>
                                     </strong>
@@ -865,10 +270,8 @@
                         </div>
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client3.png" class="centered" alt="client 5">
+                                <div class="whopic2">
+                                    <img src="images/column5.png" class="centered" alt="column 5">
                                     <strong>1日に○分運動するだけで○kg痩せる？！？！
                                         <small>2015/04/18/19:20｜be:be network</small>
                                     </strong>
@@ -877,10 +280,8 @@
                         </div>
                         <div class="span4">
                             <div class="testimonial">
-<!--                                <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
--->                                <div class="whopic2">
-<!--                                    <div class="arrow"></div>
--->                                    <img src="images/Client3.png" class="centered" alt="client 6">
+                                <div class="whopic2">
+                                    <img src="images/column6.png" class="centered" alt="column 6">
                                     <strong>ダイエットにおけるタブーを教えてしんぜよう
                                         <small>2015/04/17/13:20｜be:be network</small>
                                     </strong>
@@ -892,15 +293,11 @@
                     <div class="centered">
                         <button id="subscribe" class="button button-sp">もっと見る</button>
                     </div>
-<!--                    <p class="testimonial-text">
-                        "Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away"
-                    </p>
--->                </div>
+                </div>
             </div>
         </div>
-
-
-
+        <!-- colomun section end -->
+        <!-- diet cource section start -->
         <div class="section third-section" id="price">
             <div class="container centered">
                 <div class="sub-section">
@@ -914,51 +311,15 @@
                         </ul>
                     </div>
                     <ul class="row client-slider" id="clint-slider">
-                        <li>
-                            <a href="course.html">
-                                <img src="images/clients/ClientLogo01.png" alt="client logo 1">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo03.png" alt="client logo 3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo05.png" alt="client logo 5">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo07.png" alt="client logo 6">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo08.png" alt="client logo 7">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo09.png" alt="client logo 8">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo10.png" alt="client logo 9">
-                            </a>
-                        </li>
+                        <li><a href="course.html"><img src="images/clients/ClientLogo01.png" alt="client logo 1"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo02.png" alt="client logo 2"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo03.png" alt="client logo 3"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo04.png" alt="client logo 4"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo05.png" alt="client logo 5"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo07.png" alt="client logo 6"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo08.png" alt="client logo 7"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo09.png" alt="client logo 8"></a></li>
+                        <li><a href=""><img src="images/clients/ClientLogo10.png" alt="client logo 9"></a></li>
                     </ul>
                     <div class="title clearfix" id="contact" style="margin-top:30px;">
                         <div class="pull-left">
@@ -969,169 +330,13 @@
                 </div>
             </div>
         </div>
-        <!-- Price section start -->
-<!--        <div id="price" class="section secondary-section">
-            <div class="container">
-                <div class="title">
-                    <h1>Price</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                </div>
-                <div class="price-table row-fluid">
-                    <div class="span4 price-column">
-                        <h3>Basic</h3>
-                        <ul class="list">
-                            <li class="price">$19,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>5 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Pro</h3>
-                        <ul class="list">
-                            <li class="price">$39,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>25 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                    <div class="span4 price-column">
-                        <h3>Premium</h3>
-                        <ul class="list">
-                            <li class="price">$79,99</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>24/7</strong> Support</li>
-                            <li><strong>50 GB</strong> File Storage</li>
-                        </ul>
-                        <a href="#" class="button button-ps">BUY</a>
-                    </div>
-                </div>
-                <div class="centered">
-                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="#contact" class="button">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <!-- Price section end -->
-        <!-- Newsletter section start -->
-<!--        <div class="section third-section">
-            <div class="container newsletter">
-                <div class="sub-section">
-                    <div class="title clearfix">
-                        <div class="pull-left">
-                            <h3>Newsletter</h3>
-                        </div>
-                    </div>
-                </div>
-                <div id="success-subscribe" class="alert alert-success invisible">
-                    <strong>Well done!</strong>You successfully subscribet to our newsletter.</div>
-                <div class="row-fluid">
-                    <div class="span5">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    </div>
-                    <div class="span7">
-                        <form class="inline-form">
-                            <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required />
-                            <button id="subscribe" class="button button-sp">Subscribe</button>
-                        </form>
-                        <div id="err-subscribe" class="error centered">Please provide valid email address.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter section end -->
-        <!-- Contact section start -->
-<!--        <div id="contact" class="contact">
-            <div class="section secondary-section">
-                <div class="container">
-                    <div class="title">
-                        <h1>Contact Us</h1>
-                        <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
-                    </div>
-                </div>
-                <div class="map-wrapper">
-                    <div class="map-canvas" id="map-canvas">Loading map...</div>
-                    <div class="container">
-                        <div class="row-fluid">
-                            <div class="span5 contact-form centered">
-                                <h3>Say Hello</h3>
-                                <div id="successSend" class="alert alert-success invisible">
-                                    <strong>Well done!</strong>Your message has been sent.</div>
-                                <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
-                                            <div class="error left-align" id="err-name">Please enter name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
-                                            <div class="error left-align" id="err-email">Please enter valid email adress.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
-                                            <div class="error left-align" id="err-comment">Please enter your comment.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button id="send-mail" class="message-btn">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="span9 center contact-info">
-                        <p>123 Fifth Avenue, 12th,Belgrade,SRB 11000</p>
-                        <p class="info-mail">ourstudio@somemail.com</p>
-                        <p>+11 234 567 890</p>
-                        <p>+11 286 543 850</p>
-                        <div class="title">
-                            <h3>We Are Social</h3>
-                        </div>
-                    </div>
-                    <div class="row-fluid centered">
-                        <ul class="social">
-                            <li><a href="">
-                                    <span class="icon-facebook-circled"></span>
-                            </a></li>
-                            <li><a href="">
-                                    <span class="icon-twitter-circled"></span>
-                            </a></li>
-                            <li><a href="">
-                                    <span class="icon-linkedin-circled"></span>
-                            </a></li>
-                            <li><a href="">
-                                    <span class="icon-pinterest-circled"></span>
-                            </a></li>
-                            <li><a href="">
-                                    <span class="icon-dribbble-circled"></span>
-                            </a></li>
-                            <li><a href="">
-                                    <span class="icon-gplus-circled"></span>
-                            </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact section edn -->
+        <!-- diet cource section end -->
         <!-- Footer section start -->
         <div class="footer">
             <p><a href="index.html" style="color:white">HOME</a></p>
             <p><a href="logout.html" style="color:white">ログアウト</a></p>
             <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p>  
-<!--            <p><a href="course.html" style="color:white">バナナダイエット</a></p>
--->            <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>
+            <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>
             <p><a href="mypage.php" style="color:white">マイページ</a></p>
             <p>&copy; 2015 Be:Be network &amp; c-connect</p>
         </div>

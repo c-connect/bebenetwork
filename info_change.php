@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-
+<!--
+ * A Design by GraphBerry
+ * Author: GraphBerry
+ * Author URL: http://graphberry.com
+ * License: http://graphberry.com/pages/license
+-->
 <html lang="en">
     
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ログアウト完了｜Be:Be network</title>
+        <title>プロフィール変更｜Be:Be network</title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
@@ -26,7 +31,7 @@
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
         <link rel="shortcut icon" href="images/ico/favicon.ico">
     </head>
-
+    
     <body>
         <!-- start navigation -->
         <div class="navbar">
@@ -41,39 +46,63 @@
                     </button>
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
-                            <li><a href="#home">ログアウト</a></li>
-                            <li class="active"><a href="#service">完了</a></li>
+                            <li class="active"><a href="#home">入力</a></li>
+                            <li><a href="#portfolio">更新完了</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End navigation -->
-        <!-- Service section start -->
-        <div class="section primary-section" id="service">
+
+        <!-- register section start hotani -->
+         <?php
+        session_start();
+        $mail = $_SESSION["mail_address"];
+      /*  var_dump($_SESSION);
+        var_dump($mail);*/
+        $connect = mysql_connect ("mysql707a.xserver.jp", "japangoods_bebe", "bebe30");
+        mysql_query("SET NAMES utf8", $connect);
+        $result=mysql_db_query("japangoods_bebenetwork",
+        "SELECT * from user_tbl where mail = '$mail' ");
+  
+       /* var_dump($result);*/
+        mysql_close($connect);
+        $row = mysql_fetch_assoc($result);
+
+        ?>
+
+        <div id="profile" class="section primary-section">
             <div class="container">
-                <!-- Start title section -->
                 <div class="title">
-                    <br><br>
-                    <h1>ログアウトしました！</h1>
+                    <h1>プロフィール編集</h1>
                 </div>
                 <div class="centered">
-                    今日もあなたにいいことがありますように☆<br><br><br><br><br><br><br><br><br><br><br><br>
-                    <?php
-
-                      session_start(); /*セッションがここからはじまるよ*/
-
-                      session_destroy();
-
-                    ?>
+                    <form action="info_change2.php" name="info_change" method="POST">
+                    <div id="info_change" class="">
+                        <p>ニックネーム <input type="text" name="nickname" value="<?php echo $row['nickname']; ?>"></p>
+                        <p>目標体重   <input type="text" name="goal" value="<?php echo $row['goal']; ?>">kg</p>
+                        <p>現在の体重   <input type="text" name="weight_new" value="<?php echo $row['weight_new']; ?>">kg</p>
+                        <p>現在の身長   <input type="text" name="height" value="<?php echo $row['height']; ?>">cm</p>
+                        <p>自己紹介   <textarea name="comment" placeholder="<?php echo $row['comment']; ?>"></textarea></p>
+<!--                                <div class="radioBtn">
+                            <input type ="radio" name="menu" value="0" <?php if ($sex == 0){echo 'checked';}?>>女性
+                            <input type ="radio" name="menu" value="center" <?php if ($sex == 1){echo 'checked';}?>>男性
+                            <input type ="radio" name="menu" value="right" <?php if ($sex == 2){echo 'checked';}?>>その他
+                        </div>
+-->                            <a href='Javascript:void(0);' class='button' onclick="document.info_change.submit();">更新</a>
+                    </div>    
                 </div>
             </div>
         </div>
-        <!-- Service section end -->
+        <!-- #registor end hotani -->
+
         <!-- Footer section start -->
         <div class="footer">
             <p><a href="index.html" style="color:white">HOME</a></p>
-            <p><a href="login.html" style="color:white">ログイン</a></p>
+            <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p>
+            <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>
+            <p><a href="mypage.php" style="color:white">マイページ</a></p>
             <p>&copy; 2015 Be:Be network &amp; c-connect</p>
         </div>
         <!-- Footer section end -->
@@ -102,3 +131,4 @@
         <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
+
