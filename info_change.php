@@ -84,6 +84,8 @@
                         <p>目標体重   <input type="text" name="goal" value="<?php echo $row['goal']; ?>">kg</p>
                         <p>現在の体重   <input type="text" name="weight_new" value="<?php echo $row['weight_new']; ?>">kg</p>
                         <p>現在の身長   <input type="text" name="height" value="<?php echo $row['height']; ?>">cm</p>
+                        <p>生活スタイル   <input type="text" name="lifestyle" value="<?php echo $row['lifestyle']; ?>"></p>
+                        <p>食生活   <input type="text" name="eating" value="<?php echo $row['eating']; ?>"></p>
                         <p>自己紹介   <textarea name="comment" placeholder="<?php echo $row['comment']; ?>"></textarea></p>
 <!--                                <div class="radioBtn">
                             <input type ="radio" name="menu" value="0" <?php if ($sex == 0){echo 'checked';}?>>女性

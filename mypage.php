@@ -61,14 +61,14 @@
 
           function drawChart() {
             var data = google.visualization.arrayToDataTable([
-              ['Month', 'ゆうこ', 'ゆっきー', 'めぐみ', 'そめや', 'まり'],
-              ['4月21日',  1,    -1,    0,    -1.5,    -0.5],
-              ['4月22日',  -1,   -1,    1,    -1.5,    -0.5],
-              ['4月23日',  2,    -1,    1,    -1.5,    -0.5],
-              ['4月24日',  1,    -1,    1,    -1.5,    -0.5],
-              ['4月25日',  0.5,  -1,    1,    -1.5,    -0.5],
-              ['4月26日',  1,    -1,    2,    -1.5,    -0.5],
-              ['4月27日',  2.5,  -1,    3,    -1.5,    -0.5]
+              ['Month', 'あなた', 'ゆっきー', 'めぐみ', 'そめや', 'まり'],
+              ['4月21日',  1,    -1,    0,    -0.5,    0],
+              ['4月22日',  -1,   -1.4,    1,    -0.7,    -2],
+              ['4月23日',  2,    -1.6,    1,    -1.7,    -0.5],
+              ['4月24日',  1,    -1.8,    -1.3,    -2,    -0.7],
+              ['4月25日',  0.5,  -1.9,    1,    -3,    -0.8],
+              ['4月26日',  1,    -2,    -1.3,    -2,    -1],
+              ['4月27日',  1.8,  -0.3,    0,    -1,    -1.7]
             ]);
 
             var options = {
@@ -87,7 +87,7 @@
 
           function drawChart() {
             var data = google.visualization.arrayToDataTable([
-              ['Month', 'ゆうこ'],
+              ['Month', 'あなた'],
               ['3月27日',  47],
               ['4月21日',  48],
               ['4月22日',  48],
@@ -116,13 +116,13 @@
           function drawChart() {
             var data = google.visualization.arrayToDataTable([
               ['Month', '朝バナナ', '白湯', '逆立ち', '蒸し野菜', '脱糖', 'オチョダイエット'],
-              ['4月21日',  48,    51,    60,    44,    46,    70],
-              ['4月22日',  48,    51,    59,    44,    47,    60],
-              ['4月23日',  47.5,  51,    58,    44,    48,    65],
-              ['4月24日',  47.5,  51,    57,    44,    49,    65],
-              ['4月25日',  47.5,  51,    56,    44,    50,    70],
-              ['4月26日',  47,    51,    55,    44,    51,    50],
-              ['4月27日',  47,    51,    54,    44,    52,    60]
+              ['4月21日',  -1,    -1,    -1,    -2,    0,    -3],
+              ['4月22日',  -2,    -1,    -2,    -3,    -2,    -1],
+              ['4月23日',  -1,  -2,    -1,    -1,    -1,    -2],
+              ['4月24日',  -3,  -3,    0,    -2,    -2,    -2],
+              ['4月25日',  -3,  -4,    -1,    -3,    -3,    -3],
+              ['4月26日',  -2,    -3,    -2,    -2,    -2,    -5],
+              ['4月27日',  -1,    -2,    -3,    -1,    -2,    -6]
             ]);
 
             var options = {
@@ -193,9 +193,9 @@
                                     <div><span>現在体重</span><?php echo $row["weight_new"]; ?>kg</div>
                                     <div><span>開始身長</span><?php echo $row["height"]; ?>cm</div>
                                     <div><span>開始体重</span><?php echo $row["weight"]; ?>kg</div>
-                                    <div><span>生活リズム</span>ふつう</div>
-                                    <div><span>食生活</span>1日3食+おやつ</div>
-                                    <div><span>自己紹介</span><p><?php echo $row["comment"]; ?></p></div>
+                                    <div><span>生活リズム</span><?php echo $row["lifestyle"]; ?></div>
+                                    <div><span>食生活</span><?php echo $row["eating"]; ?></div><br>
+                                    <div><span>自己紹介</span><br><?php echo $row["comment"]; ?></div><br>
                                     <a href="info_change.php" class="da-link button">プロフィール編集</a>
                                 </div>
                             </div>
@@ -336,8 +336,8 @@
             <p><a href="index.html" style="color:white">HOME</a></p>
             <p><a href="logout.html" style="color:white">ログアウト</a></p>
             <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p>  
-            <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>
-            <p><a href="mypage.php" style="color:white">マイページ</a></p>
+            <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>     
+        <!--<p><a href="mypage.php" style="color:white">マイページ</a></p> hotani-->
             <p>&copy; 2015 Be:Be network &amp; c-connect</p>
         </div>
         <!-- Footer section end -->

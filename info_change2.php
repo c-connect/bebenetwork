@@ -74,22 +74,33 @@
         $goal = $_POST["goal"];
         $height = $_POST["height"];
         $weight_new = $_POST["weight_new"];
+        $lifestyle = $_POST["lifestyle"];
+        $eating = $_POST["eating"];
         $comment = $_POST["comment"];
 
         mysql_db_query("japangoods_bebenetwork",
                       "UPDATE user_tbl SET nickname = '$nickname', goal= '$goal', height= '$height',
-                      weight_new = '$weight_new', comment= '$comment' WHERE mail = '$mail' ");
+                      weight_new = '$weight_new', lifestyle = '$lifestyle', eating = '$eating',
+                      comment= '$comment' WHERE mail = '$mail' ");
+
                   mysql_close($connect);
 
                   echo "<p>以下の通り、プロフィールを変更しました！</p>";
                   echo "ニックネーム: ";
                   echo "$nickname<br>";
                   echo "目標体重: ";
-                  echo "$goal<br>";                  
+                  echo "$goal";
+                  echo "kg<br>";                  
                   echo "現在の身長: ";
-                  echo "$height<br>";
+                  echo "$height";
+                  echo "cm<br>";
                   echo "現在の体重: ";
-                  echo "$weight_new<br>";
+                  echo "$weight_new";
+                  echo "kg<br>";
+                  echo "生活リズム: ";
+                  echo "$lifestyle<br>";
+                  echo "食生活: ";
+                  echo "$eating<br>";
                   echo "自己紹介: ";
                   echo "$comment<br>";
 

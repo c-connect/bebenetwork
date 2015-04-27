@@ -58,6 +58,7 @@
                     <h1>ログアウトしました！</h1>
                 </div>
                 <div class="centered">
+                    <br>
                     今日もあなたにいいことがありますように☆<br><br><br><br><br><br><br><br><br><br><br><br>
                     <?php
 
