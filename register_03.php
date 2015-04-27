@@ -102,7 +102,6 @@
     <!-- kanryo end hotani -->
     <!-- Footer section start -->
     <div class="footer">
-        <p><a href="index.html" style="color:white">HOME</a></p>
         <p>&copy; 2015 Be:Be network &amp; c-connect</p>
     </div>
     <!-- Footer section end -->

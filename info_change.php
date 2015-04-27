@@ -101,7 +101,7 @@
 
         <!-- Footer section start -->
         <div class="footer">
-            <p><a href="index.html" style="color:white">HOME</a></p>
+            <p><a href="logout.html" style="color:white">ログアウト</a></p>
             <p><a href="allbattle.html" style="color:white">ダイエットバトル</a></p>
             <p><a href="mybattle.html" style="color:white">あなたが参加中のバトル</a></p>
             <p><a href="mypage.php" style="color:white">マイページ</a></p>
